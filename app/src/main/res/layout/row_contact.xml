@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="contact"
+            type="com.gowtham.calllogapp.db.data.Contact" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/view_root"
+        style="@style/LView"
+        android:padding="14dp"
+        android:clickable="true"
+        android:longClickable="true"
+        android:focusable="true"
+        android:background="@{contact.selected ? @color/colorTrans : @color/colorWhite}"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="ContentDescription,UnusedAttribute">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            imageUrl="@{contact.image}"
+            android:src="@drawable/ic_other_user" />
+
+        <LinearLayout
+            style="@style/LWView"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                style="@style/StyleTxtName"
+                android:text="@{contact.name}" />
+
+            <LinearLayout
+               style="@style/WView">
+                <TextView
+                    style="@style/StyleTxtMobile"
+                    android:layout_gravity="center_vertical"
+                    android:text="@{Long.toString(contact.mobile)}" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="@{contact.externalContact ? View.VISIBLE : View.GONE}"
+                    android:background="@drawable/shape_circle"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_options"
+            style="@style/WView"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:visibility="@{contact.isSelectionMode ? View.GONE : View.VISIBLE}">
+
+            <ImageView
+                android:id="@+id/img_fav"
+                style="@style/WView"
+                android:padding="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                showStar="@{contact.favorite}"/>
+
+            <ImageView
+                android:id="@+id/img_call"
+                style="@style/WView"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/img_fav"
+                android:background="@drawable/shap_rec"
+                android:src="@drawable/ic_calll"
+                android:padding="6dp"
+                app:tint="@color/colorPrimaryDark" />
+        </RelativeLayout>
+
+        <CheckBox
+            android:visibility="@{contact.isSelectionMode ? View.VISIBLE : View.GONE}"
+            android:id="@+id/checkbox"
+            style="@style/WView"
+            android:clickable="false"
+            android:focusable="false"
+            android:checked="@{contact.selected}"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</layout>

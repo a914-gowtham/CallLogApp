@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout style="@style/FView">
+
+        <com.google.android.material.appbar.AppBarLayout style="@style/VView">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/StyleToolbar"
+                app:title="@string/txt_contacts"
+                app:titleTextColor="@color/colorWhite" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            style="@style/VView"
+            app:tabIndicatorColor="@color/colorBlack"
+            app:tabIndicatorHeight="2dp"
+            android:paddingTop="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            app:tabSelectedTextColor="@color/colorBlack"
+            app:tabTextColor="@color/colorHint" />
+
+        <View
+          style="@style/LineView"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            style="@style/VWView"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</layout>

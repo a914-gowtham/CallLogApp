@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        style="@style/FView"
+        tools:ignore="ContentDescription,UseCompoundDrawables">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_favs"
+            style="@style/StyleList"
+            android:layout_alignParentTop="true"
+            tools:listitem="@layout/row_contact" />
+
+        <LinearLayout
+            style="@style/WVView"
+            android:visibility="gone"
+            android:id="@+id/view_empty"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/WView"
+                android:src="@drawable/ic_empty_favs" />
+
+            <TextView
+                style="@style/StyleTxtName"
+                android:text="@string/txt_empty_favs" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

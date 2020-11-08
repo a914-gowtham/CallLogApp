@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/FCalls">
+
+    <fragment
+        android:id="@+id/FCalls"
+        android:name="com.gowtham.calllogapp.fragments.calls.FCalls"
+        android:label="f_calls"
+        tools:layout="@layout/f_calls" />
+    <fragment
+        android:id="@+id/FPhoneBook"
+        android:name="com.gowtham.calllogapp.fragments.phonebook.FPhoneBook"
+        android:label="f_phone_book"
+        tools:layout="@layout/f_phone_book" />
+    <fragment
+        android:id="@+id/FFavs"
+        android:name="com.gowtham.calllogapp.fragments.phonebook.fav.FFavs"
+        android:label="f_favs"
+        tools:layout="@layout/f_favs" />
+    <fragment
+        android:id="@+id/FContacts"
+        android:name="com.gowtham.calllogapp.fragments.phonebook.contacts.FContacts"
+        android:label="f_contacts"
+        tools:layout="@layout/f_contacts" />
+</navigation>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CallLogApp</string>
+    <string name="txt_calls">Calls</string>
+    <string name="txt_contacts">Contacts</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dum_name">Gowtham</string>
+    <string name="dum_num">9943625572</string>
+    <string name="dum_date">Today</string>
+    <string name="txt_search">Search</string>
+    <string name="txt_delete">Delete</string>
+    <string name="txt_del">Delete</string>
+    <string name="txt_del_desc">Are you sure do you want to delete the contact?</string>
+    <string name="txt_yes_delete">Yes, Delete</string>
+    <string name="txt_no">No</string>
+    <string name="txt_empty_favs">No favorites found.</string>
+    <string name="txt_empty_calls">Call log is empty.</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/BottomSheetStyle"
+        android:background="@drawable/shape_sheet">
+
+    <LinearLayout
+        style="@style/VView"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/StyleTxtName"
+            android:fontFamily="@font/font_bd"
+            android:text="@string/txt_del"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txt_camera"
+            style="@style/StyleTxtName"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="@string/txt_del_desc" />
+
+        <LinearLayout
+            style="@style/LView"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/LWView"
+                android:id="@+id/btn_no"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/colorPrimaryLt"
+                android:text="@string/txt_no"
+                android:textColor="@color/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/LWView"
+                android:id="@+id/btn_yes"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/txt_yes_delete" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
